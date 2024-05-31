@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario2</title>
+</head>
+
+<body>
+  <form action="controlador" method="get" enctype="multipart/form-data">
+    <div>
+      <label for="nombre">nombre</label>
+      <input type="text" name="nombre" placeholder="ingrese su nombre" id="nombre" pattern="[a-zA-Z ]{2,60}"
+        autocomplete="off" required><br>
+    </div>
+    <div>
+      <label for="edad">edad</label>
+      <input type="number" name="edad" id="edad" placeholder="eliga" step="1" autocomplete="off" min="15" max="70"
+        required>
+    </div>
+    <div>
+      <label for="correo">correo</label>
+      <input type="email" name="correo" id="correo" placeholder="ingrese su email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{5,20}$" required autocomplete="off">
+    </div>
+    <div>
+      <label for="telefono">telefono</label>
+      <input type="text" name="telefono" id="telefono" placeholder="ingrese su telefono" pattern="[0-9]{0-10}"
+        autocomplete="off" required>
+    </div>
+    <div>
+      <label for="ciudad">seleccione su ciudad</label>
+      <select name="ciudad" id="ciudad">
+        <option value="0" selected>seleccione</option>
+        <option value="1">Bucaramanga</option>
+        <option value="2">Florida</option>
+        <option value="3">Piedecuesta</option>
+        <option value="4">Giron</option>
+        <option value="5">Barrancabermeja</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="radio" name="Sexo" value="hombre" checked>M
+        <input type="radio" name="Sexo" value="mujer">F
+      </label>
+    </div>
+    <br>
+    <div>
+      <label>
+        <input type="checkbox" name="habilidad" checked>HTML
+        <br>
+      </label>
+      <label>
+        <input type="checkbox" name="habilidad">JS
+        <br>
+      </label>
+      <label>
+        <input type="checkbox" name="habilidad" checked>CSS
+        <br>
+      </label>
+      <label>
+        <input type="checkbox" name="habilidad">PHP
+        <br>
+      </label>
+    </div>
+    <div>
+      <label for=""></label>
+      <input type="file" accept="img/.jpeg,.png" multiple>
+    </div>
+    <button>Guardar</button>
+  </form>
+</body>
+
+</html>
